@@ -34,11 +34,10 @@ To use the calculator, simply open the `MainPage.html` file in a web browser. En
 
 The application can be tested by entering various numbers and observing the output. Try inputs like prime numbers, products of two primes with equal and unequal digit counts, and larger numbers to explore the behavior of the application across different scenarios.
 
-## Example
-
-![ללא שם](https://github.com/OmriNaor/Semi-Prime-and-Brilliant-Numbers-Calculator/assets/106623821/fdef8518-6b15-4b3b-bfa1-002db1bd81d4)
-
-
 ## Remarks
 
 This project serves as a practical application of web development skills, combining HTML, CSS, and JavaScript to create an educational tool. It demonstrates handling user input, performing calculations, and dynamically updating the web page based on the results. The project is intended for educational purposes and showcases the implementation of mathematical concepts in a web application.
+
+## Example
+
+![ללא שם](https://github.com/OmriNaor/Semi-Prime-and-Brilliant-Numbers-Calculator/assets/106623821/fdef8518-6b15-4b3b-bfa1-002db1bd81d4)
