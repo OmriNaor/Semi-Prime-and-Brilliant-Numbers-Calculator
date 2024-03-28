@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Semi-Prime & Brilliant Numbers Calculator</title>
+    <link href="MainPage.css" rel="stylesheet">
+    <script src="MainPage.js"></script>
+</head>
+
+<body onload="init()">
+    <header>
+        <h1>Omri Naor - 208306068</h1>
+    </header>
+    
+    <!-- Main content area of the page -->
+    <main>
+        <!-- Section for the calculator input and button -->
+        <section id="calculator">
+            <input type="text" id="txtInput" placeholder="Enter a number" autofocus>
+            <button id="cmdCalculate">Calculate</button>
+        </section>
+
+        <!-- Section to display the result of the calculation -->
+        <section id="result">
+        </section>
+    </main>
+
+    <!-- Overlay div for modal/error messages; initially hidden -->
+    <div id="overlay"></div>
+    <div id="errorContainer">
+        <div id="errorBox">
+            <p id="errorMessage"></p>
+            <button id="errorOkButton">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer section of the page -->
+    <footer>
+        <nav>
+            <a href="https://en.wikipedia.org/wiki/Semiprime" target="_blank">Semi-Prime Numbers</a>
+            <a href="https://www.geeksforgeeks.org/brilliant-numbers/" target="_blank">Brilliant Numbers</a>
+        </nav>
+    </footer>
+</body>
+</html>

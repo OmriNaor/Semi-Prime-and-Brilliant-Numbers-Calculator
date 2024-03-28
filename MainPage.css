@@ -1,0 +1,221 @@
+/* Reset some default styles */
+body, h1, nav 
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    color: #CA952C;
+}
+
+body 
+{
+    background: linear-gradient(to right, #87CEFA, #172DEB); /* Gradient from light blue to darker blue */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Style the header */
+header 
+{
+    background: linear-gradient(to bottom, #E417EB, #830187);
+    padding: 10px; /* Padding around the header content */
+    text-align: center; /* Center-align header content */
+    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+}
+
+/* Style the main content area */
+main 
+{
+    flex: 1;
+    overflow: auto; /* Add scroll inside main if content overflows */
+    display: flex; /* Use flexbox for layout */
+    padding: 20px; /* Padding around the main content */
+    gap: 20px; /* Gap between flex items */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    margin-bottom: 50px;
+}
+
+#calculator 
+{
+    flex-basis: 30%;
+    min-height: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    background-color: #304F6B;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#result 
+{
+    flex-basis: 63%;
+    min-height: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    background-color: #304F6B;
+}
+
+table 
+{
+    border-collapse: collapse; /* Collapse borders between table cells */
+    font-size: 1.2em; /* Increase font size */
+    margin: 0 auto; /* Center-align the table */
+    width: 100%; /* Make the table stretch to the full width of its container */
+    max-width: 100%; /* Ensure the table doesn't exceed the container width */
+    table-layout: fixed;
+}
+
+td 
+{
+    border: 1px solid #ddd; /* Light grey border around table cells */
+    padding: 10px 20px; /* Padding inside table cells */
+    text-align: center; /* Center-align text within table cells */
+}
+
+/* Style the footer */
+footer 
+{
+    background: linear-gradient(to top, #E417EB, #830187); 
+    padding: 10px; /* Padding around footer content */
+    border-top: 1px solid #ddd; /* Top border for separation */
+    text-align: center; /* Center-align footer content */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the navigation links */
+nav a 
+{
+    color: #CA952C; 
+    text-decoration: none; /* Remove default underline */
+    font-size: 25; /* Increase font size */
+    padding: 5px; /* Padding around link text */
+    margin: 0 10px; /* Spacing between links */
+    border: 1px solid transparent; /* Transparent border by default */
+    padding: 5px 15px; /* Padding inside links */
+}
+
+nav a:hover 
+{
+    border-color: #0056b3; /* Border color on hover */
+    border-radius: 5px; /* Rounded corners for the border */
+    background-color: #e8f4fc; /* Light background on hover */
+}
+
+.hidden 
+{
+    display: none; /* Hide elements */
+}
+
+/* Overlay styles */
+#overlay 
+{
+    position: fixed; /* Position the overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: none; /* Initially hidden */
+    align-items: center; /* Center-align content vertically */
+    justify-content: center; /* Center-align content horizontally */
+    z-index: 10; /* Ensure overlay is above other content */
+}
+
+/* Error container styles */
+#errorContainer 
+{
+    position: fixed; /* Position the error container */
+    top: 50%; /* Position it vertically in the middle */
+    left: 50%; /* Position it horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center it precisely */
+    padding: 20px; /* Padding around error content */
+    background: linear-gradient(to bottom, #E417EB, #830187);
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    display: none; /* Initially hidden */
+    z-index: 11; /* Ensure it's above the overlay */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+#errorMessage   
+{
+    font-size: 18px; /* Larger font size for message */
+    margin-bottom: 20px; /* Spacing between message and button */
+    color: white;
+}
+
+#errorOkButton 
+{
+    padding: 10px 30px;
+    display: block; /* Display the error button as a block element */
+    font-size: 18px; /* Increase font size for better visibility */
+    margin: 20px auto; /* Center-align the button horizontally */
+    border: 2px solid #fff; /* White border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    background-color: linear-gradient(to right, #87CEFA, #172DEB)
+}
+
+#errorOkButton:hover 
+{
+    background-color: #494640
+}
+
+/* Input text styles */
+#txtInput 
+{
+    font-size: 16px; /* Font size of input text */
+    padding: 10px; /* Padding around input text */
+    margin: 10px 0; /* Margin above and below input text */
+    border: 2px solid #ddd; /* Border for input text */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inset shadow for depth */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    width: 80%; /* Set width to 80% of the container */
+}
+
+#txtInput:focus 
+{
+    border-color: #007bff; /* Border color on focus */
+}
+
+/* Calculate button styles */
+#cmdCalculate 
+{
+    font-size: 16px; /* Font size of button text */
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #007bff; /* Background color of button */
+    color: white; /* Text color of button */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and box shadow */
+    width: 80%; /* Set width to 80% of the container */
+}
+
+#cmdCalculate:hover 
+{
+    background-color: #0056b3; /* Background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+}
+
+#cmdCalculate:active 
+{
+    background-color: #004095; /* Background color when active (pressed) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow when active */
+}
